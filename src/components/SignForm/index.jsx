@@ -1,18 +1,19 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Button } from 'antd'
 import Api from '../../services/Api'
 import './index.css'
 
 export default function SignForm() {
   const { register, handleSubmit } = useForm()
-  //const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const submit = data => {
     Api.post('/auth', data)
       .then((res) => {
         sessionStorage.setItem('token', res.data.token)
+        navigate('/notes')
       })
       .catch((err) => {
         // if(err.status === 401){
