@@ -1,0 +1,33 @@
+.noteContainer{
+  background-color: #F0F2F5;
+  height: 90vh;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContent{
+  margin: 1rem 0rem;
+  width: 90vw;
+}
+
+.card-name{
+  font-style: italic;
+  width:100%;
+}
+
+@media screen and ( min-width: 720px ){
+  .cardContent{
+    width: 60vw;
+  }
+}
+
+@media screen and ( min-width: 1200px ){
+  .cardContent{
+    width: 40vw;
+  }
+}
