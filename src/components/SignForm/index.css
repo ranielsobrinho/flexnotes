@@ -1,0 +1,33 @@
+form{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+
+.form{
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: .3rem;
+}
+
+h2{
+  color: #001529;
+}
+
+input{
+  border: none;
+  border-bottom: 1px solid #adaeb1;
+  margin-bottom: .8rem;
+}
+
+@media screen and (min-width: 720px){
+  form{
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  form{
+    width: 30vw;
+  }
+}
