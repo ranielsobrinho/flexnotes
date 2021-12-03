@@ -1,9 +1,14 @@
 import React from 'react'
 
-export default function Notes() {
+import Header from '../../components/Header'
+import Notes from '../../components/Notes'
+import './index.css'
+
+export default function NotesPage() {
   return (
     <div>
-      <p> Notes component </p>
+      <Header />
+      <Notes />
     </div>
   )
 }
