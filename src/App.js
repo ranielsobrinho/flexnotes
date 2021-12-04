@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import Home from './pages/Home'
-import NotesPage from './pages/Notes'
+import NotesPage from './pages/NotesPage'
 import EditNotes from './pages/EditNotes'
 
 function App() {
