@@ -20,6 +20,11 @@ input{
   margin-bottom: .8rem;
 }
 
+.error{
+  color: red;
+  width: 100%;
+}
+
 @media screen and (min-width: 720px){
   form{
     width: 60vw;
