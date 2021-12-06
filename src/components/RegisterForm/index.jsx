@@ -18,9 +18,9 @@ export default function RegisterForm() {
     <div className='form'>
       <h2>Registrar</h2>
       <form onSubmit={handleSubmit(submit)}>
-        <input type='text' name='username' {...register('username')} placeholder='Username'/>
+        <input type='text' name='username' {...register('username', {required: true})} placeholder='Username'/>
 
-        <input type='password' name='password' {...register('password')} placeholder='Password'/>
+        <input type='password' name='password' {...register('password', {required: true})} placeholder='Password'/>
 
         <Button type='primary' htmlType='submit'>Cadastrar</Button>
       </form>
