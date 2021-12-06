@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Header from '../../components/Header'
+import LoginHeader from '../../components/LoginHeader'
 import Notes from '../../components/Notes'
 import './index.css'
 
 export default function NotesPage() {
   return (
     <div>
-      <Header />
+      <LoginHeader />
       <Notes />
     </div>
   )
