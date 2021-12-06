@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { Button } from 'antd'
+import { Button, Alert } from 'antd'
 import Api from '../../services/Api'
 import './index.css'
 
@@ -14,6 +14,7 @@ export default function SignForm() {
     Api.post('/auth', data)
       .then((res) => {
         sessionStorage.setItem('token', res.data.token)
+        sessionStorage.setItem('userId', res.data.userId)
         navigate('/notes')
       })
       .catch((err) => {
@@ -22,12 +23,12 @@ export default function SignForm() {
   }
   return (
     <div className='form'>
+      {error && <Alert message={error} type='error' />}
       <h2>Entrar</h2>
-      {error && <p className='error'>{error}</p>}
       <form onSubmit={handleSubmit(submit)}>
-        <input type='text' name='username' {...register('username')} placeholder='Username'/>
+        <input type='text' name='username' {...register('username', {required: true})} placeholder='Username' />
 
-        <input type='password' name='password' {...register('password')} placeholder='Password'/>
+        <input type='password' name='password' {...register('password', {required: true})} placeholder='Password' />
 
         <Button type='primary' htmlType='submit'>Entrar</Button>
       </form>
