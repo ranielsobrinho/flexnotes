@@ -9,7 +9,7 @@ import './index.css'
 export default function Home() {
   const [login, setLogin] = useState(true)
 
-  function toggleLogin(){
+  function toggleLogin() {
     setLogin(!login)
   }
 
@@ -17,20 +17,20 @@ export default function Home() {
     <div className='homeContainer'>
       <HeaderComponent />
       <div className="content">
-        { login ?
+        {login ?
           <>
-            <SignForm/>
+            <SignForm />
             <div className='toggle'>
               <p>Não tem uma conta?</p>
-              <Button type='link' onClick={() => {toggleLogin()}}>Faça a sua agora.</Button>
+              <Button type='link' onClick={() => { toggleLogin() }}>Faça a sua agora.</Button>
             </div>
           </>
-        :
+          :
           <>
             <RegisterForm />
             <div className='toggle'>
               <p>Já tem conta?</p>
-              <Button type='link' onClick={() => {toggleLogin()}}>Faça seu login.</Button>
+              <Button type='link' onClick={() => { toggleLogin() }}>Faça seu login.</Button>
             </div>
           </>
         }
