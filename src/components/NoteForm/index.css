@@ -1,0 +1,12 @@
+.noteForm{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+}
+
+.noteForm > input{
+  width: 80%;
+  margin-right: .3rem;
+}
