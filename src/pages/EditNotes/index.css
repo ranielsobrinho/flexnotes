@@ -1,0 +1,24 @@
+.editNote{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Buttons{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.editButton{
+  margin: 0 .5rem;
+}
+
+.editInput{
+  background-color: #F0F2F5;
+}
+
+.exclude{
+  color: red;
+}
