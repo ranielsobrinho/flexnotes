@@ -19,7 +19,7 @@ export default function Notes() {
         setLoading(true)
       })
       .catch(err => console.error(err))
-  }, [notes.id])
+  }, [notes])
 
   function edit(id){
     navigate(`/edit/${id}`)
