@@ -31,7 +31,7 @@ export default function HeaderComponent() {
   }
   return (
     <div>
-      <Header>
+      <Header className='loginHeader'>
         <p className="headerTitle">FlexNotes<BookOutlined /></p>
         <div className='headerButtons'>
           <Button onClick={info} type='primary'><PlusCircleOutlined />Add Note</Button>
