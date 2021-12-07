@@ -6,19 +6,16 @@ import Api from '../../services/Api'
 
 export default function NoteForm() {
   const { register, handleSubmit } = useForm()
-  const userId = parseInt(sessionStorage.getItem('userId'))
   const submit = data => {
     Api.post('/notes', {
       content: data.content,
-      userId: userId
+      userId: sessionStorage.getItem('userId')
     })
       .then((res) => {
         message.success('Nova nota salva com sucesso')
-        console.log(res)
       })
       .catch(err => {
         message.error('Houve algum problema.')
-        console.log(err)
       })
   }
 
